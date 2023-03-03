@@ -19,11 +19,10 @@ export function dragToMove(div, handle) {
         startY = e.clientY-offsetY;
             
         if (mousedown) {
-            e.preventDefault();
             div.style.left = (e.clientX-offsetX)+"px";
             div.style.top = (e.clientY-offsetY)+"px";
         };
-    }, {passive: false});
+    });
 
     window.addEventListener(isTouch ? "touchend" : "mouseup", () => {
         mousedown = false;
