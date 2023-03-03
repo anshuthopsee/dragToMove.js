@@ -14,7 +14,7 @@ export function dragToMove(div, handle) {
     });
 
     document.addEventListener(isTouch ? "touchmove" : "mousemove", (e) => {
-        e.preventDefault();
+        e.preventDefault()
         e = e.touches ? e.touches[0] : e;
         startX = e.clientX-offsetX;
         startY = e.clientY-offsetY;
