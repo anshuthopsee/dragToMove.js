@@ -14,16 +14,16 @@ export function dragToMove(div, handle) {
     });
 
     document.addEventListener(isTouch ? "touchmove" : "mousemove", (e) => {
+        e = e.touches ? e.touches[0] : e;
+        startX = e.clientX-offsetX;
+        startY = e.clientY-offsetY;
+            
         if (mousedown) {
             e.preventDefault();
-            e = e.touches ? e.touches[0] : e;
-            startX = e.clientX-offsetX;
-            startY = e.clientY-offsetY;
-        
             div.style.left = (e.clientX-offsetX)+"px";
             div.style.top = (e.clientY-offsetY)+"px";
         };
-    });
+    }, {passive: false});
 
     window.addEventListener(isTouch ? "touchend" : "mouseup", () => {
         mousedown = false;
