@@ -1,4 +1,5 @@
 export function dragToMove(div, handle) {
+    const isTouch = window.ontouchstart !== undefined;
     let mousedown = false;
     let offsetX;
     let offsetY;
@@ -12,6 +13,7 @@ export function dragToMove(div, handle) {
     });
 
     document.addEventListener("mousemove", (e) => {
+        e = isTouch ? e.touches[0] : e;
         startX = e.clientX-offsetX;
         startY = e.clientY-offsetY;
 
