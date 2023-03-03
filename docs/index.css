@@ -11,9 +11,10 @@
 .handle {
     display: flex;
     align-tems: center;
+    justify-content: center;
     height: 30px;
     background-color: #3da5ff;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
     font-weight: bold;
 }
