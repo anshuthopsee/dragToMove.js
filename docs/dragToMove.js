@@ -20,8 +20,8 @@ export function dragToMove(div, handle) {
             startX = e.clientX-offsetX;
             startY = e.clientY-offsetY;
             
-            div.style.left = (e.clientX-offsetX)+"px";
-            div.style.top = (e.clientY-offsetY)+"px";
+            div.style.left = startX+"px";
+            div.style.top = startY+"px";
         };
     }, {passive: false});
 
