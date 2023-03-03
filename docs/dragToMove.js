@@ -7,14 +7,14 @@ export function dragToMove(div, handle) {
     let startY;
 
     handle.addEventListener(isTouch ? "touchstart" : "mousedown", (e) => {
-        e.preventDefault();
+        e.stopPropogation();
         mousedown = true;
         offsetX = e.touches ? e.touches[0].clientX - e.target.getBoundingClientRect().left: e.offsetX
         offsetY = e.touches ? e.touches[0].clientY - e.target.getBoundingClientRect().top : e.offsetY
     });
 
     document.addEventListener(isTouch ? "touchmove" : "mousemove", (e) => {
-        e.preventDefault()
+        e.preventDefault();
         e = e.touches ? e.touches[0] : e;
         startX = e.clientX-offsetX;
         startY = e.clientY-offsetY;
