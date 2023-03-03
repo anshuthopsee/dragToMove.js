@@ -2,7 +2,7 @@
 
 A tiny JavaScript library to make DOM elements dragable with mouse or touch.
 
-##Usage
+## Usage
 
 ```javascript
 import {dragToMove} from "dragToMove.js";
