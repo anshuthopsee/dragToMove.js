@@ -10,5 +10,7 @@
 
 .handle {
     height: 60px;
-    background-color: orange;
+    background-color: #3da5ff;
+    color: white;
+    font-weight: bold;
 }
