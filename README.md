@@ -13,4 +13,4 @@ import {dragToMove} from "dragToMove.js";
 dragToMove(document.querySelector('div'), document.querySelector('.handle));
 ```
 
-[Demo](https://anshuthopsee.github.io/dragToMove.js/docs/)
+[Demo](https://anshuthopsee.github.io/dragToMove.js/)
