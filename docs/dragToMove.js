@@ -23,7 +23,7 @@ export function dragToMove(div, handle) {
             div.style.left = (e.clientX-offsetX)+"px";
             div.style.top = (e.clientY-offsetY)+"px";
         };
-    })
+    });
 
     window.addEventListener(isTouch ? "touchend" : "mouseup", () => {
         mousedown = false;
