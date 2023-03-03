@@ -5,7 +5,7 @@ A tiny JavaScript library to make DOM elements movable with mouse or touch.
 ## Usage
 
 ```javascript
-import {dragToMove} from "dragToMove.js";
+import { dragToMove } from "dragToMove.js";
 
 //Takes in two arguments
 // 1. Main HTML element.
