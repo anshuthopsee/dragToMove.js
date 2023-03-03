@@ -16,5 +16,6 @@
     background-color: #3da5ff;
     font-size: 12px;
     color: white;
+    pointer-events: none;
     font-weight: bold;
 }
