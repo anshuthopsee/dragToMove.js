@@ -8,7 +8,6 @@ export function dragToMove(div, handle) {
 
     handle.addEventListener(isTouch ? "touchstart" : "mousedown", (e) => {
         mousedown = true;
-        console.log(e)
         offsetX = e.touches ? e.touches[0].clientX - e.target.getBoundingClientRect().left: e.offsetX;
         offsetY = e.touches ? e.touches[0].clientY - e.target.getBoundingClientRect().top : e.offsetY;
     });
