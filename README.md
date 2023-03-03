@@ -1,6 +1,6 @@
 # dragToMove.js
 
-A tiny JavaScript library to make DOM elements draggable with mouse or touch.
+A tiny JavaScript library to make DOM elements movable with mouse or touch.
 
 ## Usage
 
