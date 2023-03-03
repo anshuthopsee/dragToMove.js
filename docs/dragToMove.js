@@ -21,7 +21,7 @@ export function dragToMove(div, handle) {
             startY = e.clientY-offsetY;
             
             div.style.left = startX+"px";
-            div.style.top = startY+"px";
+            div.style.top = startY+"px"
         };
     }, {passive: false});
 
