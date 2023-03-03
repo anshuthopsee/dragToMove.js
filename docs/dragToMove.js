@@ -1,18 +1,17 @@
 export function dragToMove(div, handle) {
-    const isTouch = window.ontouchstart !== undefined;
     let mousedown = false;
     let offsetX;
     let offsetY;
     let startX;
     let startY;
 
-    handle.addEventListener(isTouch ? "touchstart" : "mousedown", (e) => {
+    handle.addEventListener("mousedown", (e) => {
         mousedown = true;
         offsetX = e.offsetX;
         offsetY = e.offsetY;
     });
 
-    document.addEventListener(isTouch ? "touchmove" : "mousemove", (e) => {
+    document.addEventListener("mousemove", (e) => {
         startX = e.clientX-offsetX;
         startY = e.clientY-offsetY;
 
@@ -22,7 +21,7 @@ export function dragToMove(div, handle) {
         };
     });
 
-    window.addEventListener(isTouch ? "touchend" : "mouseup", () => {
+    window.addEventListener("mouseup", () => {
         mousedown = false;
         if (startX < 0) div.style.left = 0+"px";
         if (startX > window.screen.width-div.clientWidth) div.style.left = window.screen.width-div.clientWidth+"px";
